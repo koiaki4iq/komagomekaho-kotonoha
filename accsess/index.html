@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>アクセス</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style_koide.css" rel="stylesheet">
+<link href="../css/style_kyoutsuu.css" rel="stylesheet">
+<link href="../css/style_oguri.css" rel="stylesheet">
+<link href="../css/style_sato.css" rel="stylesheet">
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+<!--ready関数-->
+<script>
+$(function(){
+  $('#hamburger').on('click',function(){
+    $('#hamburger').toggleClass("open");
+    $('#header-menu').slideToggle();
+  });
+});
+</script>
+<!-- フェードイン -->
+<script>
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+  var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+  var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+  $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+    var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+      $(this).addClass('active');              /* 「active」のクラスを付与 */
+    }
+  });
+});
+
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+
+</script>
+</head>
+
+<body>
+<!-- header -->    
+    <header class="header">
+        <div class="o-logo">
+            <a href="../index.html"><img src="../img/foot-logo-brown.png" alt="ことのはロゴマーク" width="414" height="228"></a>
+        </div>
+        <nav>
+            <ul id="header-menu">
+                <li><a href="../shouhin-ichiran/index.html">商品一覧</a></li>
+                <li><a href="../oshirase/index.html">お知らせ</a></li>
+                <li><a href="../about-us/index.html">ことのはについて</a></li>
+                <li><a href="index.html">アクセス</a></li>
+                <li><a href="../otoiawase/index.html">お問い合わせ</a></li>
+                <li><a href="../index.html">トップ</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger" class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+    <div class="hero"></div>
+
+<main class="s-access">
+        <section class="s-washi-back">
+            <h1>アクセス</h1>
+    </section>
+    <div class="s-inner">
+        <img src="../img/s-access-mv.png" alt="駒込菓舗ことのや　店舗の外観" class="s-mt139 fadeIn" width="620" height="350">
+        <img src="../img/s-logo.png" alt="駒込菓舗ことのは" class="s-access-logo fadeIn" width="542" height="303">
+        <div class="s-container">
+            <div class="s-store-info">
+                <div class="s-box fadeIn"><p>店名　　　　駒込菓舗ことのは</p></div>
+                <div class="s-box fadeIn"><p>営業時間　　11:00～19:00</p></div>
+                <div class="s-box fadeIn"><p>定休日　　　水曜日</p></div>
+                <div class="s-box fadeIn"><p>電話　　　　0120-123-4567</p></div>
+                <div class="s-box fadeIn"><p>メール　　　info@komagomekaho-kotonoha.com</p></div>
+                <div class="s-boxb fadeIn"><p>所在地　　　〒113-0021　文京区本駒込3丁目XX-XXX</p></div>
+            </div>
+            <div class="s-store-info-sp">
+                <div class="s-box2 fadeIn"><p>店名<br>　　　駒込菓舗　ことのは</p></div>
+                <div class="s-box2 fadeIn"><p>営業時間<br>　　　11:00～19:00</p></div>
+                <div class="s-box2 fadeIn"><p>定休日<br>　　　水曜日</p></div>
+                <div class="s-box2 fadeIn"><p>電話<br>　　　0120-123-4567</p></div>
+                <div class="s-box2 fadeIn"><p>メール<br>　　　info@komagomekaho-kotonoha.com</p></div>
+                <div class="s-box2b fadeIn"><p>所在地<br>　　　〒113-0021<br>
+                                                　　　文京区本駒込3丁目XX-XXX</p></div>
+            </div>
+        </div>
+        <div class="s-flex s-mitijun s-sp-column">
+            <img src="../img/s-access-illust .png" alt="JR山手線・東京メトロ南北線「駒込駅」より徒歩約7分・都営三田線「千石駅」より徒歩約10分・都営バス「本駒込三丁目」停留所より徒歩2分"  class="fadeIn" width="1239" height="1062">
+            <div class="s-box">
+                <div class="s-access-txt fadeIn">
+                    <h2>電車でお越しの方</h2>
+                    <p>・JR山手線・東京メトロ南北線「駒込駅」より徒歩約7分<br>
+                    ・都営三田線「千石駅」より徒歩約10分</p>
+                </div>
+                <div class="s-access-txt fadeIn">
+                    <h2>バスでお越しの方</h2>
+                    <p> ・都営バス「本駒込三丁目」停留所より徒歩2分</p>
+                </div>
+                <div class="s-access-txt2 fadeIn">
+                    <h2>お車でお越しの方</h2>
+                    <p> ・店舗前に駐車スペースはございません。<br>近隣のコインパーキングをご利用ください。</p>
+                </div>
+            </div>
+        </div>
+        <div class="s-g-m fadeIn">
+            <a href="https://maps.app.goo.gl/PZQYZBYDDHnLwAMFA" target="_blank"><p class="s-map">▼ Google Mapで見る</p></a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5790117743904!2d139.74443487525312!3d35.736570826932834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d969bd7335f%3A0xc93afd70355008c3!2z6aeS6L686aeF!5e0!3m2!1sja!2sjp!4v1762514533608!5m2!1sja!2sjp" class="s-pc-map" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5790117743904!2d139.74443487525312!3d35.736570826932834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d969bd7335f%3A0xc93afd70355008c3!2z6aeS6L686aeF!5e0!3m2!1sja!2sjp!4v1762514533608!5m2!1sja!2sjp" class="s-sp-map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="o-bird">
+        <a id="pagetop" href="#top" class="page_top" style="display: none;"><img src="../img/bird195260.png" alt=" " width="195" height="260" align="right"></a>
+    </div>
+</main>
+
+<!--フッター-->
+        <footer class="o-footer">
+            <div class="o-footer-df">
+                <div class="o-footer-left">
+                    <a href="../index.html"><img src="../img/foot-logo-white.png" width="141" alt="ことのはのロゴマーク"></a>
+                    <p>商品のご予約はこちら</p>
+                    <div class="o-footer-df03">
+                        <img src="../img/k-top-about2.png" width="20" height="20" alt="">
+                        <h2>0120-123-4567</h2>
+                    </div>
+                    <div class="o-footer-shop-info">
+                        <div><p>〒113-0021</p></div>
+                        <div><p>文京区本駒込3丁目XX-XXX</p></div>
+                        <div><p>営業時間</p></div>
+                        <div><p>11時〜19時</p></div>
+                        <div><p>定休日</p></div>
+                        <div><p>水曜</p></div>
+                    </div>
+                </div>
+                <div class="o-footer-link">
+                    <a href="../index.html"><p>トップ</p></a>
+                    <a href="../shouhin-ichiran/index.html"><p>商品一覧</p></a>
+                    <a href="../about-us/index.html"><p>駒込菓舗ことのはについて</p></a>
+                    <a href="../oshirase/index.html"><p>お知らせ</p></a>
+                    <a href="index.html"><p>アクセス</p></a>
+                    <a href="../otoiawase/index.html"><p>お問い合わせ</p></a>
+                    <a href="../privacy-policy/index.html"><p>プライバシーポリシー</p></a>
+                </div>
+                <div class="o-footer-cl">
+                    <p>&copy;2025駒込菓舗ことのは</p>
+                </div>
+            </div>
+        </footer>    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

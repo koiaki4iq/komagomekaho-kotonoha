@@ -1,0 +1,629 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.k-wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+.k-hero {
+    background-image: url(../img/k-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0 0 15rem 0;
+}
+.k-hero h1{
+    padding: 0 0 5rem 2em;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: #fff;
+    font-size: 4.0rem;
+}
+@media (max-width: 768px) {
+    .k-hero h1 {
+        font-size: 3.6rem;
+    }
+}
+@media (max-width: 470px) {
+    .k-hero h1 {
+        font-size: 2.6rem;
+        padding-left: 0.2em;
+    }
+}
+
+
+.k-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .k-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*トップ商品一覧*/
+.k-top-shouhin {
+    margin-bottom: 20rem;
+}
+.k-top-shouhin h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 7rem;
+}
+.k-top-wagasi00 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7rem;
+    padding: 1em;
+    gap: 4.5rem;
+}
+.k-top-wagasi00 p {
+    display: grid;
+    text-align: center;
+}
+ .k-top-wagasi01 {
+    display: flex;
+    gap: 6rem;
+}
+.k-top-wagasi02 {
+    display: flex;
+    gap: 3rem;
+}
+.k-top-dorayaki img {
+    width: 100%;
+    height: auto;
+    margin-top: 3.5rem;
+}
+.k-top-dorayaki p {
+    margin-top: 3.8rem;
+}
+.k-top-kasutera img {
+    width: 100%;
+    height: auto;
+    margin-top: 3.5rem;
+}
+.k-top-kasutera p {
+    margin-top: 5.3rem;
+}
+.k-top-manju img {
+    width: 100%;
+    height: auto;
+    margin-top: 4.5rem ;
+}
+.k-top-manju p {
+    margin-top: 5.9rem;
+}
+.k-top-daifuku {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.k-top-daifuku img {
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+}
+.k-top-daifuku p {
+    margin-top: 7.6rem;
+}
+.k-top-jounama {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.k-top-jounama img {
+    width: 80%;
+    height: auto ;
+    margin-left: 2rem;
+}
+.k-top-jounama p {
+   margin-top: 4rem;
+}
+@media (max-width: 768px) {
+    
+    .k-top-wagasi00 {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .k-top-wagasi02 {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        padding: 3em;
+        gap: 2rem;
+    }
+
+    
+    .k-top-daifuku img {
+        width: 90%;
+        height: auto;
+    }
+    .k-top-daifuku p {
+        margin-top: 5.3rem;
+    }
+    .k-top-jounama p {
+        margin-top: 3rem;
+    }
+    
+}
+
+/* もっとみるボタン */
+.k-top-btn-df {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.view-more{
+    border: 2px solid #BD8B75;
+    color: #BD8B75;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #fff;
+    padding: 10px 20px;
+    width: fit-content;
+}
+.view-more:hover{
+    border: 2px solid #e3a78d;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #e3a78d;
+    padding: 10px 20px;
+    width: fit-content;
+    transition: all 0.4s;
+}
+
+
+
+/*トップお知らせ*/
+.k-top-osirase {
+    margin-bottom: 20rem;
+}
+.k-top-osirase h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 7rem;
+}
+.k-top-osirase-df {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+}
+.k-top-osiruko img {
+    width: 299px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+.k-top-saiji img {
+    width: 299px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+.k-top-sinsaku img {
+    width: 299px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+    .k-top-osirase {
+        margin: 0 0 15rem 1rem;
+    }
+    .k-top-osirase-df {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+    .k-top-osiruko {
+        margin-bottom: 3rem;
+    }
+    .k-top-osiruko img {
+        margin-bottom: 2rem;
+    }
+    .k-top-saiji {
+        margin: 3rem 0;
+    }
+    .k-top-saiji img {
+        margin-bottom: 2rem;
+    }
+    .k-top-sinsaku {
+        margin-top: 2rem;
+    }
+    .k-top-sinsaku img{
+        margin-bottom: 2rem;
+    }
+    .k-top-sinsaku h5 {
+        margin-bottom: 5rem;
+    }
+    
+}
+
+
+
+
+/*トップことのはについて*/
+
+.k-top-about {
+    background-image: url(../img/k-top-wasi1920696.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    padding-bottom: 5em;
+    margin-bottom: 20rem;
+}
+.k-top-about h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0 7rem 0;
+    padding: 1.8em 0 0 0;
+}
+.k-top-about-df {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.k-top-about-df img {
+    width: 33%;
+    height: auto;
+}
+.k-top-about-df div {
+    padding-left: 5em;
+}
+.k-top-about-df h2 {
+    padding-bottom: 2em;
+}
+@media (max-width: 768px) {
+    .k-top-about {
+        margin-bottom: 15rem;
+    }
+    .k-top-about-df  {
+        display: grid;
+        place-items: center;
+        align-items: center;
+    }
+    .k-top-about-df img {
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+    .k-top-about-df p {
+        margin-top: -1.2rem;
+    }
+}
+
+
+
+
+
+/* 店舗情報 */
+.k-store{
+    margin-bottom: 10rem;
+    padding: 0 2em;
+}
+.k-store h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 7rem;
+}
+.k-store .k-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.k-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+
+}
+.k-info img{
+    width: 33%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+.k-info h2{
+    margin-bottom: 1.5rem;
+}
+.k-image {
+    display: flex;
+    flex-direction: column;
+    
+}
+.k-image img{
+    width: 527px;
+    max-width: 100%;
+    height: auto;
+}
+.k-image a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.k-image .view-more{
+    margin-top: 0.8rem;
+}
+@media (max-width: 768px) {
+    .k-info img {
+        display: flex;
+    }
+    .k-store {
+        margin-bottom: 15rem;
+    }
+    
+    .k-store .k-flex {
+        display: flex;
+        flex-direction: column-reverse;
+        place-items: center;
+        text-align: center;
+    }
+    .view-more {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    .k-footer-df {
+        display: block;
+        margin: 0 auto;
+    }
+    .k-footer-left {
+        display: inline-block;
+        padding-left: 4em;
+    }
+
+    .k-footer-left img {
+        width: 100%;
+        height: auto;
+    }
+    .k-footer-df03{
+        margin-left: 3rem;
+    }
+    .k-footer-df03 img {
+        width: 10%;
+        height: auto;
+    }
+    .k-footer-shop-info {
+        grid-template-columns: 1fr;
+        gap: 0.5em;  
+    }
+    .k-footer-shop-info p {
+        text-align: center; 
+    }
+    
+    .k-footer-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .k-footer-link a{
+        display: inline-block;
+        margin: 0 auto;
+    }
+    .k-footer-cl {
+        margin: 5rem auto;
+        padding-right: 3em;
+    }
+    .k-footer-cl p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+/*お知らせ ヘッダー*/
+.k-header {
+    background-image: url(../img/k-top-about-back1200700.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.k-header h1 {
+    z-index: 20000;
+    padding: 2.2em 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20rem;
+}
+
+
+/*おしらせ　コンテンツ１*/
+.k-osirase-contents {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10rem auto;
+}
+.k-osirase-contents img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 3rem;
+}
+.k-osirase-text h2 {
+    margin: 2rem 3rem 4rem 0 ;
+}
+
+#k-img{
+    margin-left: 5.2rem;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+.k-osirase-btn-df {
+    display: flex;
+    
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .k-header h1 {
+        margin-bottom: 15rem;
+    }
+    .k-osirase-contents {
+        display: flex;
+        flex-direction: column-reverse;
+        place-items: center;
+        text-align: center;
+    }
+    .k-osirase-text {
+        display: grid;
+        text-align: center;
+        margin-left: 5rem;
+    }
+   .k-osirase-contents img {
+        margin-bottom: 2rem;
+   }
+   .k-osirase-text h2{
+    
+   }
+    .k-osirase-btn-df {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-right: 2.5em;
+    }
+    #k-img {
+        margin-right: 2rem;
+    }
+    
+}
+
+
+
+/*お知らせ詳細*/
+
+.k-osirase-shousai-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0 ;
+    gap: 5rem;
+}
+.k-osirase-shousai-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    
+}
+.k-osirase-shousai-text h1 {
+    white-space: nowrap;
+}
+
+.k-osirase-shousai-text p {
+    margin-bottom: 3rem;
+}
+.k-osirase-shousai-text h2 {
+    margin-bottom: 3rem;
+}
+.k-osiruko-btn-df {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.k-osiruko-btn-df .view-more {
+    margin-top: 1.5rem;
+}
+.k-osiruko-btn-df p {
+    margin: 0;
+}
+.k-osirase-shousai-contents img {
+    width: 555px;
+    max-width: 100%;
+    height: auto;
+    padding-left: 5em;
+}
+@media (max-width: 768px) {
+   
+    .k-osirase-shousai-contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    .k-osirase-shousai-contents img {
+        padding: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* --------------
+　トップに戻る鳥
+----------------- */
+.o-bird img{
+  width: 100px;
+  margin-right: 10rem;
+}
+@media (max-width: 768px) {
+  .o-bird img{
+    width: 70px;
+    margin-right: 5rem;
+  }
+}
+
+/* フェードイン */
+.fadeIn{
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: 0.5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px;
+}
+.fadeIn.active{
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;
+}
+
+
+

@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>駒込菓舗ことのはについて</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style_koide.css" rel="stylesheet">
+<link href="../css/style_kyoutsuu.css" rel="stylesheet">
+<link href="../css/style_oguri.css" rel="stylesheet">
+<link href="../css/style_sato.css" rel="stylesheet">
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+<!--ready関数-->
+<script>
+$(function(){
+  $('#hamburger').on('click',function(){
+    $('#hamburger').toggleClass("open");
+    $('#header-menu').slideToggle();
+  });
+});
+</script>
+<!-- フェードイン -->
+<script>
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+  var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+  var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+  $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+    var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+      $(this).addClass('active');              /* 「active」のクラスを付与 */
+    }
+  });
+});
+
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+
+</script>
+
+</head>
+
+<body>
+<!-- header -->
+    <header class="header">
+        <div class="o-logo">
+            <a href="../index.html"><img src="../img/foot-logo-brown.png" alt="ことのはロゴマーク" width="414" height="228"></a>
+        </div>
+        <nav>
+            <ul id="header-menu">
+                <li><a href="../shouhin-ichiran/index.html">商品一覧</a></li>
+                <li><a href="../oshirase/index.html">お知らせ</a></li>
+                <li><a href="index.html">ことのはについて</a></li>
+                <li><a href="../accsess/index.html">アクセス</a></li>
+                <li><a href="../otoiawase/index.html">お問い合わせ</a></li>
+                <li><a href="../index.html">トップ</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger" class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+    <div class="hero"></div>
+    
+<main class="s-about">
+    <section class="s-washi-back">
+            <h1>駒込菓舗ことのはについて</h1>
+    </section>
+    <section class="s-message">
+        <div class="s-inner">
+            <p class="s-mtb139 fadeIn">駒込の静かな通りに佇む「駒込菓舗ことのは」は、季節のうつろいをお菓子に映す小さな和菓子店です。<br>
+                2018年、和菓子職人・山本が「誰でも気軽に立ち寄れて、ほっと一息つける町のお菓子屋をつくりたい」という想いで創業しました。<br>
+                毎朝ひとつひとつ丁寧に手づくりし、できたての味をお届けしています。</p>
+            <div class="s-flex fadeIn s-sp-column">
+                <img src="../img/s-tenshu.png" alt="店主の山本が和菓子を作る様子" width="729" height="885">
+                <div class="s-tenshuyori">
+                    <h2>店主より</h2>
+                    <p>「ことのは」の和菓子が、<br>ちょっと疲れた日の小さなご褒美になったり、<br>大切な人への贈り物になったりしたらうれしいです。<br>駒込の町に寄り添いながら、<br>これからも心を込めてお菓子を作ってまいります。<br>
+                        　―――　店主 山本
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="s-washi-back2">
+        <div class="s-inner">
+            <div class="s-flex s-mb100 s-sp-column">
+                <img src="../img/s-omisenituite1.png" class="fadeIn" alt="和菓子を作る職人の手元" width="400" height="272">
+                <div class="s-column">
+                    <h1 class="fadeIn">和菓子づくりへの想い</h1>
+                    <p class="fadeIn">「ことのは」という名前には、“言葉の葉”のように、人と人の気持ちをつなぐ存在でありたいという願いを込めました。素材の持ち味をいかし、甘さはやさしく、見た目にも四季を感じられるよう心がけています。<br>北海道産の小豆を炊いた自家製あんこや、香ばしい皮のどら焼き、ふっくら蒸し上げたくろまんじゅうなど、どのお菓子にも手仕事の温もりがあります。</p>
+                </div>
+            </div>
+            <div class="s-flex s-sp-column">
+                <img src="../img/s-omisenituite2.png" class="fadeIn" alt="手作りの状生菓子" width="400" height="272">
+                <div class="s-column">
+                    <h1 class="fadeIn">季節を彩るお菓子たち</h1>
+                    <p class="fadeIn">定番のどら焼き・カステラ・豆大福のほか、春の桜もち、初夏のよもぎ餅、冬のいちご大福など、季節ごとに限定の和菓子も並びます。<br>なかでも上生菓子は、その時々の花や風物をかたどったもの。見て楽しく、味わってやさしい、そんなお菓子を目指しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="s-oshirase">
+        <div class="s-inner">
+            <h1 class="fadeIn">お知らせ</h1>
+            <div class="s-news">
+                <a href="../oshirase-shousai/index.html">
+                    <div class="s-news-btn fadeIn">
+                        <p>おしるこのご予約承ります</p>
+                        <p class="s-C1ADA4">2025.11.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="s-news">
+                <a href="../oshirase-shousai/index.html">
+                    <div class="s-news-btn fadeIn">
+                        <p>東京大吉デパート「秋の和菓子展」に出店します</p>
+                        <p class="s-C1ADA4">2025.10.20</p>
+                    </div>
+                </a>
+            </div>
+            <div class="s-news-bottom">
+                <a href="../oshirase-shousai/index.html">
+                    <div class="s-news-btn fadeIn">
+                        <p>秋の新作和菓子発売開始</p>
+                        <p class="s-C1ADA4">2025.10.01</p>
+                    </div>
+                </a>
+            </div>
+            <a href="../oshirase/index.html"><div class="view-more fadeIn">
+                <p>お知らせをみる</p>
+            </div></a>
+        </div>
+    </section>
+    <section class="s-store">
+        <div class="s-inner">
+            <h1 class="fadeIn">店舗情報</h1>
+            <div class="s-flex s-sp-column-r">
+                <div class="s-info">
+                    <img src="../img/s-logo.png" class="fadeIn" alt="駒込菓舗ことのは" width="542" height="303">
+                    <h2 class="fadeIn">駒込菓舗ことのは</h2>
+                    <p class="fadeIn">所在地　　〒113-0021<br>
+                        　　　　　文京区本駒込3丁目XX-XXX<br>
+                        電話　　　0120-123-4567<br>
+                        営業時間　11時〜19時<br>
+                        定休日　　水曜<br><br>
+                        JR山手線・東京メトロ南北線「駒込駅」より徒歩約7分<br>都営三田線「千石駅」より徒歩約10分<br>
+                        都営バス「本駒込三丁目」停留所より徒歩2分
+                    </p>
+                </div>
+                <div class="s-image">
+                    <img src="../img/s-tennpojouhou-small.png" alt="駒込菓舗ことのや　店舗の外観" class="fadeIn" width="527" height="338">
+                    <a href="https://maps.app.goo.gl/PZQYZBYDDHnLwAMFA" target="_blank"><div class="view-more fadeIn"><p>Google Map</p></div></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="s-otoiawase">
+        <div class="s-inner">
+            <div class="s-contact">
+                <p class="fadeIn">駒込菓舗ことのはでは、店頭にてスムーズに受け取りいただけるよう、事前ご注文を受付しております。<br><br><br>
+                <p class="fadeIn">下記お問い合わせフォーム、またはお電話にてお気軽にお問い合わせください。</p>
+            </div>
+            <a href="../otoiawase/index.html"><div class="view-more fadeIn">
+                <p>お問い合わせ</p>
+            </div></a>
+        </div>
+    </section>
+    <div class="o-bird">
+        <a id="pagetop" href="#top" class="page_top" style="display: none;"><img src="../img/bird195260.png" alt=" " width="195" height="260" align="right"></a>
+    </div>
+</main>
+
+<!--フッター-->
+        <footer class="o-footer">
+            <div class="o-footer-df">
+                <div class="o-footer-left">
+                    <a href="../index.html"><img src="../img/foot-logo-white.png" width="141" alt="ことのはのロゴマーク"></a>
+                    <p>商品のご予約はこちら</p>
+                    <div class="o-footer-df03">
+                        <img src="../img/k-top-about2.png" width="20" height="20" alt="">
+                        <h2>0120-123-4567</h2>
+                    </div>
+                    <div class="o-footer-shop-info">
+                        <div><p>〒113-0021</p></div>
+                        <div><p>文京区本駒込3丁目XX-XXX</p></div>
+                        <div><p>営業時間</p></div>
+                        <div><p>11時〜19時</p></div>
+                        <div><p>定休日</p></div>
+                        <div><p>水曜</p></div>
+                    </div>
+                </div>
+                <div class="o-footer-link">
+                    <a href="../index.html"><p>トップ</p></a>
+                    <a href="../shouhin-ichiran/index.html"><p>商品一覧</p></a>
+                    <a href="index.html"><p>駒込菓舗ことのはについて</p></a>
+                    <a href="../oshirase/index.html"><p>お知らせ</p></a>
+                    <a href="../accsess/index.html"><p>アクセス</p></a>
+                    <a href="../otoiawase/index.html"><p>お問い合わせ</p></a>
+                    <a href="../privacy-policy/index.html"><p>プライバシーポリシー</p></a>
+                </div>
+                <div class="o-footer-cl">
+                    <p>&copy;2025駒込菓舗ことのは</p>
+                </div>
+            </div>
+        </footer>    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>

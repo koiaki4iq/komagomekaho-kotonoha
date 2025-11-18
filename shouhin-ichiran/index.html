@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<title>商品一覧</title>
+
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style_koide.css" rel="stylesheet">
+<link href="../css/style_kyoutsuu.css" rel="stylesheet">
+<link href="../css/style_oguri.css" rel="stylesheet">
+<link href="../css/style_sato.css" rel="stylesheet">
+
+<!--google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!-- ハンバーガーメニュー -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="script.js"></script> -->
+
+<!-- 上へ戻るボタン -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+
+<!-- スライダー -->
+<script src="../js/slick.min.js"></script> 
+<link href="../css/slick.css" rel="stylesheet">
+
+<!--ready関数-->
+<script>
+$(function(){
+  $('#hamburger').on('click',function(){
+    $('#hamburger').toggleClass("open");
+    $('#header-menu').slideToggle();
+  });
+});
+
+$(function(){
+    $('.slider').slick({
+        autoplay: true, // 自動でスクロール
+        autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
+        speed: 5000, // スライドが流れる速度を設定
+        cssEase: "linear", // スライドの流れ方を等速に設定
+        slidesToShow: 6, // 表示するスライドの数
+        swipe: false, // 操作による切り替えはさせない
+        arrows: false, // 矢印非表示
+        pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
+        pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
+        responsive: [
+        {
+            breakpoint: 750,
+            settings: {
+            slidesToShow: 3, // 画面幅750px以下でスライド3枚表示
+            }
+        }
+        ]
+    });
+});
+
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+  var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+  var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+  $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+    var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+      $(this).addClass('active');              /* 「active」のクラスを付与 */
+    }
+  });
+});
+
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+
+</script>
+
+</head>
+
+<body>
+    <header class="header">
+    <div class="o-logo">
+            <a href="../index.html"><img src="../img/foot-logo-brown.png" alt="ことのはロゴマーク" width="414" height="228"></a>
+    </div>    
+        <nav>
+            <ul id="header-menu">           
+                <li><a href="index.html">商品一覧</a></li>
+                <li><a href="../oshirase/index.html">お知らせ</a></li>
+                <li><a href="../about-us/index.html">ことのはについて</a></li>
+                <li><a href="../accsess/index.html">アクセス</a></li>
+                <li><a href="../otoiawase/index.html">お問い合わせ</a></li>
+                <li><a href="../index.html">トップ</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger" class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- ↓↓　ここから下を変える　↓↓ -->
+     
+<main class="oguri">
+    <div class="o-midasi-ichiran">
+        <h1 class="syouhinitiran">商品一覧</h1>
+    </div>
+    <div class="slider">
+        <div><img src="../img/o-slider-2syudorayaki-2.png" alt="あんことクリームのどらやき" width="753" height="432" /></div>
+        <div><img src="../img/o-slider-kosidorayaki-2.png" alt="こしあんのどらやき" width="660" height="432" /></div>
+        <div><img src="../img/o-slider-kasutera-2.png" alt="カステラ" width="546" height="432" /></div>
+        <div><img src="../img/o-slider-manju-2.png" alt="くろまんじゅう" width="564" height="432" /></div>
+        <div><img src="../img/o-slider-mamedaihuku-2.png" alt="豆大福" width="729" height="432" /></div>
+        <div><img src="../img/o-slider-ichigodaihuku-2.png" alt="いちご大福" width="660" height="432" /></div>
+        <div><img src="../img/o-slider-sakuramochi-2.png" alt="桜もち" width="660" height="432" /></div>
+        <div><img src="../img/o-slider-yomogimochi-2.png" alt="よもぎ餅" width="669" height="432" /></div>
+        <div><img src="../img/o-slider-nerikiri-2.png" alt="ねりきり" width="555" height="432" /></div>
+        <div><img src="../img/o-slider-2syudorayaki-2.png" alt="あんことクリームのどらやき" width="753" height="432" /></div>
+        <div><img src="../img/o-slider-kosidorayaki-2.png" alt="こしあんのどらやき" width="660" height="432" /></div>
+        <div><img src="../img/o-slider-kasutera-2.png" alt="カステラ" width="546" height="432" /></div>
+        <div><img src="../img/o-slider-manju-2.png" alt="くろまんじゅう" width="564" height="432" /></div>
+        <div><img src="../img/o-slider-mamedaihuku-2.png" alt="豆大福" width="729" height="432" /></div>
+        <div><img src="../img/o-slider-ichigodaihuku-2.png" alt="いちご大福" width="660" height="432" /></div>
+        <div><img src="../img/o-slider-sakuramochi-2.png" alt="桜もち" width="660" height="432" /></div>
+        <div><img src="../img/o-slider-yomogimochi-2.png" alt="よもぎ餅" width="669" height="432" /></div>
+        <div><img src="../img/o-slider-nerikiri-2.png" alt="ねりきり" width="555" height="432" /></div>
+
+    </div>
+    <div class="o-cp-arrows">
+        <div class="o-cp-arrow"></div>
+        <div class="o-cp-arrow"></div>
+    </div>
+    <div class="o-item1">
+        <div class="fadeIn">
+            <div class="o-item1-img">
+                <img src="../img/o-nerikiri.png" alt="ねりきり" width="480" height="476">
+            </div>
+        </div>
+        <div class="o-item1-txt">
+            
+                <div class="fadeIn"><h2>上生菓子～四季～</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-nerikiri-txt">季節の移ろいを感じられる、彩りゆたかな上生菓子。<br>春は桜や菜の花、夏はひまわりや花火、<br>秋は紅葉や栗、冬は椿や雪だるまなど、<br>職人がひとつひとつ心を込めて仕上げ、その時季ならではの美しさと味わいをお届けします。</p></div>
+            </div>
+                <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                    <p>もっとみる</p>
+                </div></a>
+        </div>
+    </div>
+    <div class="o-item2">
+        <div class="o-item2-txt">
+                <div class="fadeIn"><h2>どら焼き　粒あん＆クリーム</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-2syudora-txt">ふっくらと焼き上げた生地に、ふんわり甘い自家製クリームと粒の食感をいかした風味豊かな粒あんをはさんだ、当店自慢のどら焼きです。<br>北海道産小豆をじっくり炊き上げ、ほどよい甘さに仕上げました。おやつにも、ちょっとした贈り物にもぴったりです。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+        <div class="fadeIn">
+            <div class="o-item2-img">
+                <img src="../img/o-2syudorayaki.png" alt="あんことクリームのどらやき" width="1011" height="573">
+            </div>
+        </div>
+    </div>
+    <div class="o-item3">
+        <div class="fadeIn">
+            <div class="o-item3-img">
+                <img src="../img/o-kosidorayaki.png" alt="こしあんのどらやき" width="936" height="567">
+            </div>
+        </div>
+        <div class="o-item3-txt">
+                <div class="fadeIn"><h2>どら焼き　こしあん</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-kosidora-txt">ふっくら香ばしく焼き上げた生地に、やさしい甘さの餡をたっぷりと。定番の「こしあん」は北海道産小豆を丁寧に炊き上げ、なめらかで上品な味わいに。<br>ひとくちごとに、小豆の香りとやさしい甘みが広がります。<br>お茶の時間に、ぜひどうぞ。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+    </div>
+    <div class="o-item4">
+        <div class="o-item4-txt">
+                <div class="fadeIn"><h2>カステラ</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-kastera-txt">しっとり、ふんわりと焼き上げた定番の味。<br>卵の風味をいかした生地に、上品な甘みの砂糖を<br>ほどよく加えました。<br>一口食べれば、やさしい甘さが口いっぱいに広がります。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+        <div class="o-item4-img">
+            <div class="fadeIn">
+                <img src="../img/o-kasutera.png" alt="カステラ" width="789" height="690">
+            </div>
+        </div>
+    </div>
+    <div class="o-item5">
+        <div class="o-item5-img">
+        <div class="fadeIn">
+            <img src="../img/o-sakuramochi.png" alt="桜もち" width="735" height="477">
+        </div>
+        </div>
+        <div class="o-item5-txt">
+                <div class="fadeIn"><h2>桜もち</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-sakuramochi-txt">春の訪れを感じる、ほんのり桜色の生地をはなびらのように薄く焼き上げ、なめらかなこしあんを包みました。<br>桜の葉のほのかな塩味が、あんこの甘さを引き立てます。<br>見た目も香りも華やかで、春限定の人気の和菓子です。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+    </div>
+    <div class="o-item6">
+        <div class="o-item6-txt">
+                <div class="fadeIn"><h2>よもぎ餅</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-yomogi-txt">香り高い国産よもぎをたっぷり使い、やわらかく仕上げた<br>お餅に、やさしい甘さの粒あんを包みました。<br>よもぎの豊かな香りと、あんこの自然な甘みが広がります。<br>昔ながらの素朴なおいしさをどうぞ。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+        <div class="o-item6-img">
+            <div class="fadeIn">
+                <img src="../img/o-yomogimochi.png" alt="よもぎ餅" width="861" height="483">
+            </div>
+        </div>
+    </div>
+    <div class="o-item7">
+        <div class="o-item7-img">
+            <div class="fadeIn">
+                <img src="../img/o-manju.png" alt="くろまんじゅう" width="705" height="513">
+            </div>
+        </div>
+        <div class="o-item7-txt">
+                <div class="fadeIn"><h2>くろまんじゅう</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-manju-txt">黒糖の深い香りが広がる、しっとりとした生地のおまんじゅう。中には、なめらかなこしあんをたっぷり包みました。<br>ひとつ頬張れば、素朴ながらも奥深い味わいに思わず笑みがこぼれます。<br>昔ながらの懐かしい味を、ぜひお楽しみください。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+    </div>
+    <div class="o-item8">
+        <div class="o-item8-txt">
+            
+                <div class="fadeIn"><h2>豆大福</h2></div>
+            <div class="fadeIn">    
+                <div><p class="o-mamedaihuku-txt">もっちりとしたお餅の中に、なめらかなこしあんを<br>たっぷり。ほどよい塩味の赤えんどう豆が、あんこの甘さを引き立てます。<br>できたてのやわらかさと、手づくりならではの風味をお楽しみください。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+        <div class="o-item8-img">
+            <div class="fadeIn">
+                <img src="../img/o-mamedaihuku.png" alt="豆大福" width="1023" height="423">
+            </div>
+        </div>
+    </div>
+    <div class="o-item9">
+        <div class="o-item9-img">
+            <div class="fadeIn">
+                <img src="../img/o-ichigodaihuku.png" alt="いちご大福" width="831" height="591">
+            </div>
+        </div>
+        <div class="o-item9-txt">
+                <div class="fadeIn"><h2>いちご大福</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-ichigo-txt">やわらかなお餅の中に、みずみずしいいちごとあんこを包みました。<br>甘酸っぱいいちごと、あんこのやさしい甘さが相性抜群です。<br>季節限定の人気商品。贈り物にも喜ばれます。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+    </div>
+    <div class="o-item10">
+        <div class="o-item10-txt">
+                <div class="fadeIn"><h2>きんつば</h2></div>
+            <div class="fadeIn">
+                <div><p class="o-kintuba-txt">しっとり炊き上げた粒あんに、ほくほくの栗を加え、<br>小麦粉の衣で包んで香ばしく焼き上げました。<br>小豆の風味と栗のやさしい甘みが重なり、上品で奥行きの<br>ある味わいに。<br>控えめな甘みで、何度でも食べたくなる味です。</p></div>
+            </div>
+            <a href="../shouhin-shousai/index.html" class="fadeIn"><div class="view-more">
+                <p>もっとみる</p>
+            </div></a>
+        </div>
+        <div class="o-item10-img">
+            <div class="fadeIn">
+                <img src="../img/o-kintsuba.png" alt="きんつば" width="903" height="534">
+            </div>
+        </div>
+    </div>
+
+<div class="o-contact">
+    <div class="o-con-txt-box">
+        <div class="fadeIn">
+            <div class="o-con-txt1"><p>駒込菓舗ことのはでは、店頭にてスムーズに受け取りいただけるよう、事前ご注文を受付しております。</p></div>
+            <div class="o-con-txt2"><p>下記お問い合わせフォーム、またはお電話にてお気軽にお問い合わせください。</p></div>
+        </div>
+    </div>
+    <a href="../otoiawase/index.html" class="fadeIn"><div class="view-more">
+        <p>お問い合わせ</p>
+    </div></a>
+</div>
+
+    <div class="o-bird">
+        <a id="pagetop" href="#top" class="page_top" style="display: none;"><img src="../img/bird195260.png" alt=" " width="195" height="260" align="right"></a>
+    </div>
+</main>
+
+
+<!-- <div class="o-foot-kari"></div> -->
+
+<!--フッター-->
+        <footer class="o-footer">
+            <div class="o-footer-df">
+                <div class="o-footer-left">
+                    <a href="../index.html"><img src="../img/foot-logo-white.png" width="141" alt="ことのはのロゴマーク"></a>
+                    <p>商品のご予約はこちら</p>
+                    <div class="o-footer-df03">
+                        <img src="../img/k-top-about2.png" width="20" height="20" alt="">
+                        <h2>0120-123-4567</h2>
+                    </div>
+                    <div class="o-footer-shop-info">
+                        <div><p>〒113-0021</p></div>
+                        <div><p>文京区本駒込3丁目XX-XXX</p></div>
+                        <div><p>営業時間</p></div>
+                        <div><p>11時〜19時</p></div>
+                        <div><p>定休日</p></div>
+                        <div><p>水曜</p></div>
+                    </div>
+                </div>
+                <div class="o-footer-link">
+                    <a href="../index.html"><p>トップ</p></a>
+                    <a href="index.html"><p>商品一覧</p></a>
+                    <a href="../about-us/index.html"><p>駒込菓舗ことのはについて</p></a>
+                    <a href="../oshirase/index.html"><p>お知らせ</p></a>
+                    <a href="../accsess/index.html"><p>アクセス</p></a>
+                    <a href="../otoiawase/index.html"><p>お問い合わせ</p></a>
+                    <a href="../privacy-policy/index.html"><p>プライバシーポリシー</p></a>
+                </div>
+                <div class="o-footer-cl">
+                    <p>&copy;2025駒込菓舗ことのは</p>
+                </div>
+            </div>
+        </footer>    
+</body>
+
+</html>

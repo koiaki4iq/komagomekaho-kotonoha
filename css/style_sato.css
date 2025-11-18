@@ -1,0 +1,597 @@
+@charset "utf-8";
+/* CSS Document */
+img{
+  max-width: 100%;
+  height: auto;
+}
+/* フェードイン */
+.fadeIn{
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: 0.5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px;
+}
+.fadeIn.active{
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;
+}
+
+
+/* もっとみるボタン */
+.view-more{
+  border: 2px solid #BD8B75;
+  color: #BD8B75;
+  font-weight: 500;
+  border-radius: 50px;
+  background-color: #fff;
+  padding: 10px 20px;
+  width: fit-content;
+}
+.view-more:hover{
+  border: 2px solid #e3a78d;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 500;
+  background-color: #e3a78d;
+  padding: 10px 20px;
+  width: fit-content;
+  transition: all 0.4s;
+}
+/* MAX WIDTH  1200px */
+.s-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.s-flex{
+    display: flex;
+}
+/* 下層ページ　和紙部分 */
+.s-washi-back{
+    background-image: url(../img/s-washi-back.png);
+    width: 100%;
+    padding: 8em 4em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s-mtb139{
+    margin: 20rem 0;
+}
+.s-mb100{
+    margin-bottom: 10rem;
+}
+.s-C1ADA4{
+    color: #C1ADA4;
+}
+/* --------------
+　トップに戻る鳥
+----------------- */
+.o-bird img{
+  width: 100px;
+  margin-right: 10rem;
+}
+@media (max-width: 768px) {
+  .o-bird img{
+    width: 70px;
+    margin-right: 5rem;
+  }
+}
+
+
+
+/* 駒込菓舗ことのはについてページ */
+/* 店主より */
+.s-message .s-flex{
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 0 0 20rem 0;
+}
+.s-message .s-flex .s-tenshuyori h2{
+    margin-bottom: 3.6rem;
+}
+.s-message img{
+    width: 30%;
+}
+/* こだわり */
+.s-washi-back2{
+    padding: 15em 0;
+    background-image: url(../img/s-washi-back.png);
+    background-attachment: fixed;
+}
+.s-washi-back2 .s-flex{
+    width: 100%;
+    gap: 6rem;
+    align-items: center;
+}
+.s-washi-back2 img{
+    width: 40%;
+}
+.s-washi-back2 .s-flex .s-column h1{
+    margin: 0 0 3.6rem 0;
+}
+/* お知らせ */
+.s-oshirase{
+    padding: 10rem 0;
+}
+.s-oshirase h1{
+    margin-bottom: 7.3rem;
+}
+.s-oshirase .s-news{
+    padding: 4.5rem 6.5rem;
+    border-top: 2px dashed #C1ADA4 ;
+    width: 80%;
+}
+.s-oshirase .s-news-bottom{
+    padding: 4.5rem 6.5rem;
+    border-top: 2px dashed #C1ADA4 ;
+    border-bottom: 2px dashed #C1ADA4 ;
+    width: 80%;
+    margin-bottom: 8.2rem;
+}
+.s-oshirase .s-news-btn{
+    display: flex;
+    justify-content: space-between;
+}
+/* 店舗情報 */
+.s-store{
+    padding: 10rem 0;
+}
+.s-store h1{
+    margin-bottom: 7.3rem;
+}
+.s-store .s-flex{
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.s-store .s-info{
+    /* border: 1px solid #000; */
+    width: 38%;
+}
+.s-store .s-info img{
+    width: 30%;
+    margin-bottom: 2rem;
+}
+.s-store .s-info h2{
+    margin-bottom: 1.5rem;
+}
+.s-store .s-image{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.s-store .s-image .view-more{
+    margin-top: 0.8rem;
+}
+/* お問い合わせ */
+.s-otoiawase{
+    padding: 15rem 0 20rem 0;
+}
+.s-contact{
+    margin-bottom: 8.2rem;
+}
+
+@media (max-width: 768px){
+.s-mtb139{
+    margin: 15rem 0;
+}
+/* お店について */
+.s-washi-back2{
+    padding: 10rem 0;
+}
+.s-washi-back2 .s-flex{
+    width: 100%;
+    gap: 3rem;
+    align-items: center;
+}
+.s-washi-back2 img{
+    width: 50%;
+}
+.s-sp-column{
+    flex-direction: column;
+}
+
+.s-store .s-sp-column-r{
+    flex-direction: column-reverse;
+}
+.s-store .s-info{
+    /* border: 1px solid #000; */
+    width: 100%;
+}
+.s-washi-back2 img{
+    width: 100%;
+}
+.s-message img{
+    width: 40%;
+    margin-bottom: 1rem;
+}
+.s-message .s-flex{
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 0 10rem 0;
+}
+.s-message .s-flex .s-tenshuyori h2{
+    margin-bottom: 1.5rem;
+}
+.s-message img{
+    width: 40%;
+}
+.s-oshirase .s-news{
+    padding: 2.5rem 1.5rem;
+    width: 90%;
+}
+.s-oshirase .s-news-bottom{
+    padding: 2.5rem 1.5rem;
+    width: 90%;
+}
+.s-oshirase .s-news-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.s-oshirase .s-C1ADA4{
+    margin-top: 10px;
+}
+}
+@media screen and (max-width: 480px){
+.s-message .s-flex{
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 0 10rem 0;
+}
+.s-message .s-flex .s-tenshuyori h2{
+    margin-bottom: 3.6rem;
+}
+.s-message img{
+    width: 60%;
+}
+.s-washi-back2 img{
+    width: 90%;
+}
+.s-washi-back2 .s-flex{
+    gap: 2rem;
+    align-items: center;
+}
+.s-washi-back2 .s-flex .s-column h1{
+    margin: 0 0 1rem 0;
+}
+.s-message .s-flex .s-tenshuyori h2{
+    margin-bottom: 1rem;
+}
+.s-message .s-flex{
+    padding: 0 0 7.5rem 0;
+}
+.s-washi-back2{
+    padding: 7.5rem 0;
+}
+.s-mb100{
+    margin-bottom: 7rem;
+}
+.s-oshirase{
+    padding: 7.5rem 0;
+}
+.s-store{
+    padding: 7.5rem 0;
+}
+.s-otoiawase{
+    padding: 7.5rem 0 15rem 0;
+}
+}
+
+/* アクセスページ */
+.s-mt139{
+    margin-top: 20rem;
+    margin-bottom: 5rem;
+    width: 50%;
+}
+.s-access-logo{
+    width: 17%;
+}
+.s-access .s-container{
+    margin: 5rem auto 150px auto;
+}
+.s-store-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    min-width: 400px;
+}
+.s-store-info .s-box{
+    padding: 20px 15px;
+    border-bottom: 1px solid #7F5B4C;
+    min-width: 400px;
+}
+.s-store-info .s-boxb{
+    padding: 20px 15px;
+    /* border-bottom: 1px solid #7F5B4C; */
+    min-width: 400px;
+}
+.s-store-info .s-box p{
+    text-align: start;
+}
+.s-store-info .s-boxb p{
+    text-align: start;
+}
+
+.s-access-txt{
+    margin-bottom: 20px;
+}
+.s-access-txt h2{
+    margin-bottom: 6px;
+}
+.s-mitijun{
+    align-items: center;
+    padding: 0 0 150px;
+    justify-content: center;
+}
+.s-mitijun img{
+    width: 45%;
+    margin-right: 35px;
+}
+.s-map{
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+.s-pc-map{
+    display: block;
+    width: 90vw;
+}
+.s-sp-map{
+    display: none;
+}
+.s-g-m{
+    padding: 0 0 20rem 0;
+}
+.s-access .s-store-info-sp{
+    display: none;
+}
+
+@media (max-width: 768px){
+.s-access .s-store-info{
+    display: none;
+}
+.s-access .s-store-info-sp{
+    display: flex;
+    flex-direction: column;
+}
+.s-access .s-store-info-sp .s-box2{
+    border-bottom: 1px solid #7F5B4C;
+    padding: 10px 5px;
+}
+.s-access .s-store-info-sp .s-box2b{
+    padding: 10px 5px;
+}
+.s-mt139{
+    margin-top: 15rem;
+    margin-bottom: 4rem;
+    width: 90%;
+}
+.s-access .s-container{
+    margin: 4rem auto 150px auto;
+}
+.s-access .s-mitijun img{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+.s-pc-map{
+    display: none;
+}
+.s-sp-map{
+    display: block;
+    width: 90vw;
+    height: 400px;
+}
+
+}
+@media screen and (max-width: 480px){
+.s-sp-column{
+    flex-direction: column;
+}
+.s-access .s-mitijun img{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+.s-access-logo{
+    width: 25%;
+}
+.s-store-info2 .s-box{
+    width: 60vw;
+}
+.s-g-m .pc-map{
+    display: none;
+}
+.s-pc-map{
+    display: none;
+}
+.s-sp-map{
+    display: block;
+    width: 80vw;
+    height: 300px;
+}
+.s-access .s-container{
+    margin: 45px auto 100px auto;
+}
+.s-mt139{
+    margin: 10rem 0 5rem 0;
+    width: 90%;
+}
+.s-mitijun{
+    align-items: center;
+    padding: 0 0 100px;
+}    
+.s-g-m{
+    padding: 0 0 15rem 0;
+}
+}
+
+
+/* お問い合わせフォーム */
+
+.Form {  
+    margin: 10rem auto 10rem auto;  
+    margin-left: auto;  
+    margin-right: auto;  
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width: 730px) {
+    .Form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+      .Form {    
+        /* margin-top: 40px;  */
+        padding: 0 5%;
+    }}
+    .Form-Item {  
+        border-top: 1px solid #ddd;  
+        padding-top: 24px;  
+        padding-bottom: 24px;  
+        width: 100%;  
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+    }
+        
+@media screen and (max-width: 768px) {  
+    .Form-Item {    
+        padding-left: 14px;    
+        padding-right: 14px;    
+        padding-top: 16px;    
+        padding-bottom: 16px;    
+        flex-wrap: wrap;  
+    }}
+    
+    .Form-Item:nth-child(5) {  
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .Form-Item-Label {  
+        width: 100%;  
+        max-width: 248px;  
+        letter-spacing: 0.05em;  
+        font-weight: bold;  
+        font-size: 18px;}
+        
+@media screen and (max-width: 768px) {  
+    .Form-Item-Label {    
+        max-width: inherit;    
+        display: flex;    
+        align-items: center;    
+        font-size: 15px;  
+    }}
+    
+    .Form-Item-Label.isMsg {  
+        margin-top: 8px;  
+        margin-bottom: auto;}
+        
+@media screen and (max-width: 768px) {  
+    .Form-Item-Label.isMsg {    
+        margin-top: 0;  
+    }}
+    
+    .Form-Item-Label-Required {  
+        border-radius: 6px;  
+        margin-right: 8px;  
+        padding-top: 8px;  
+        padding-bottom: 8px;  
+        width: 48px;  
+        display: inline-block;  
+        text-align: center;  
+        background: #BD8B75;  
+        color: #fff;  
+        font-size: 14px;}
+        
+@media screen and (max-width: 768px) {  
+    .Form-Item-Label-Required {    
+        border-radius: 4px;    
+        padding-top: 4px;    
+        padding-bottom: 4px;    
+        width: 32px;    
+        font-size: 10px;  
+    }}
+        
+    .Form-Item-Input {  
+        border: 1px solid #ddd;  
+        border-radius: 6px;  
+        margin-left: 40px;  
+        padding-left: 1em;  
+        padding-right: 1em;  
+        height: 48px;  
+        flex: 1;  
+        width: 100%;  
+        max-width: 410px;  
+        background: #eaedf2;  
+        font-size: 18px;}
+        
+@media screen and (max-width: 768px) {  
+    .Form-Item-Input {    
+        margin-left: 0;    
+        margin-top: 18px;    
+        height: 40px;    
+        flex: inherit;    
+        font-size: 15px;  
+    }}
+        
+    .Form-Item-Textarea {  
+        border: 1px solid #ddd;  
+        border-radius: 6px;  
+        margin-left: 40px;  
+        padding-left: 1em;  
+        padding-right: 1em;  
+        height: 216px;  
+        flex: 1;  
+        width: 100%;  
+        max-width: 410px;  
+        background: #eaedf2;  
+        font-size: 18px;}
+        
+@media screen and (max-width: 768px) {  
+    .Form-Item-Textarea {    
+        margin-top: 18px;    
+        margin-left: 0;    
+        height: 200px;    
+        flex: inherit;    
+        font-size: 15px;  
+    }}
+        
+    .Form-Btn {  
+        border-radius: 6px;  
+        margin-top: 32px;  
+        margin-left: auto;  
+        margin-right: auto;  
+        padding-top: 20px;  
+        padding-bottom: 20px;  
+        width: 280px;  
+        display: block;  
+        letter-spacing: 0.05em;  
+        background: #BD8B75;  
+        color: #fff;  
+        font-weight: 600;  
+        font-size: 20px;}
+        
+@media screen and (max-width: 768px) {  
+    .Form-Btn {    
+        margin-top: 24px;    
+        padding-top: 8px;    
+        padding-bottom: 8px;    
+        width: 160px;    
+        font-size: 16px;  
+    }}

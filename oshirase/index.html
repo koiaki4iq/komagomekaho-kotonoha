@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<title>お知らせ</title>
+
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style_koide.css" rel="stylesheet">
+<link href="../css/style_kyoutsuu.css" rel="stylesheet">
+<link href="../css/style_oguri.css" rel="stylesheet">
+<link href="../css/style_sato.css" rel="stylesheet">
+
+<!--google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+  $('#hamburger').on('click',function(){
+    $('#hamburger').toggleClass("open");
+    $('#header-menu').slideToggle();
+  });
+});
+</script>
+
+<!-- フェードイン -->
+<script>
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+  var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+  var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+  $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+    var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+      $(this).addClass('active');              /* 「active」のクラスを付与 */
+    }
+  });
+});
+
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+</head>
+
+<body>
+<header class="k-header">
+        <div class="o-logo">
+            <a href="../index.html"><img src="../img/k-top-access-logo181101.png" width="181" height="101" alt="駒込菓舗ことのはロゴマーク"></a>
+        </div>
+        <h1>お知らせ</h1>
+        <nav>
+            <ul id="header-menu">
+                <li><a href="../shouhin-ichiran/index.html">商品一覧</a></li>
+                <li><a href="../oshirase/index.html">お知らせ</a></li>
+                <li><a href="../about-us/index.html">ことのはについて</a></li>
+                <li><a href="../accsess/index.html">アクセス</a></li>
+                <li><a href="../otoiawase/index.html">お問い合わせ</a></li>
+                <li><a href="../index.html">トップ</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger" class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+</header>
+
+<!--お知らせ-->
+<div class="wrapper">
+    <main class="k-main"> 
+        <section class="k-osirase-contents fadeIn">                     
+            <div id="oshiruko" class="k-osirase-text">
+                <p>2025.11.01</p>
+                <h2>おしるこのご予約承ります</h2>
+                <div class="k-osirase-btn-df">
+                    <a href="../oshirase-shousai/index.html">
+                    <div class="view-more">
+                        <p>もっとみる</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <img src="../img/k-news-osiruko.png" width="300" height="200" alt="おしること冬景色">
+        </section>
+
+        <section class="k-osirase-contents fadeIn">                     
+            <div id="daikichi" class="k-osirase-text">
+                <p>2025.10.20</p>
+                <h2>東京大吉デパート<br>
+                秋の和菓子展に出店します</h2>
+                <div class="k-osirase-btn-df">
+                    <a href="../oshirase-shousai/index.html">
+                    <div class="view-more">
+                        <p>もっとみる</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <img src="../img/k-news-saiji.png" width="300" height="200" alt="大吉デパートの催事場">
+        </section>
+
+        <section class="k-osirase-contents fadeIn">                     
+            <div id="shinsaku" class="k-osirase-text">
+                <p>2025.10.01</p>
+                <h2>秋の新作和菓子販売開始</h2>
+                <div class="k-osirase-btn-df">
+                    <a href="../oshirase-shousai/index.html">
+                    <div class="view-more">
+                        <p>もっとみる</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <img id="k-img" src="../img/k-news-sin.png" width="300" height="200" alt="秋色の和菓子">
+        </section>
+
+        <div class="o-bird fadeIn">
+            <a id="pagetop" href="#top" class="page_top" style="display: none;"><img src="../img/bird195260.png" alt=" " width="195" height="260" align="right"></a>
+        </div>
+</div>
+
+
+
+        <!--フッター-->
+        <footer class="o-footer">
+            <div class="o-footer-df">
+                <div class="o-footer-left">
+                    <a href="../index.html"><img src="../img/foot-logo-white.png" width="141" alt="ことのはのロゴマーク"></a>
+                    <p>商品のご予約はこちら</p>
+                    <div class="o-footer-df03">
+                        <img src="../img/k-top-about2.png" width="20" height="20" alt="">
+                        <h2>0120-123-4567</h2>
+                    </div>
+                    <div class="o-footer-shop-info">
+                        <div><p>〒113-0021</p></div>
+                        <div><p>文京区本駒込3丁目XX-XXX</p></div>
+                        <div><p>営業時間</p></div>
+                        <div><p>11時〜19時</p></div>
+                        <div><p>定休日</p></div>
+                        <div><p>水曜</p></div>
+                    </div>
+                </div>
+                <div class="o-footer-link">
+                    <a href="../index.html"><p>トップ</p></a>
+                    <a href="../shouhin-ichiran/index.html"><p>商品一覧</p></a>
+                    <a href="../about-us/index.html"><p>駒込菓舗ことのはについて</p></a>
+                    <a href="../oshirase/index.html"><p>お知らせ</p></a>
+                    <a href="../accsess/index.html"><p>アクセス</p></a>
+                    <a href="../otoiawase/index.html"><p>お問い合わせ</p></a>
+                    <a href="../privacy-policy/index.html"><p>プライバシーポリシー</p></a>
+                </div>
+                <div class="o-footer-cl">
+                    <p>&copy;2025駒込菓舗ことのは</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    
+    
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>-->
+</body>
+
+</html>
